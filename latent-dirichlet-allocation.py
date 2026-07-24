@@ -1,4 +1,4 @@
-# Thank you to Shashank Kapadia on Medium for the guidance
+# Thank you to Shashank Kapadia on Medium.com for the guidance
 
 import pandas as pd
 import numpy as np
@@ -11,7 +11,7 @@ from wordcloud import WordCloud
 
 # SETTINGS -----------------
 
-SUBJECT = 'reading'
+SUBJECT = 'science'
 
 # --------------------------
 
@@ -36,9 +36,9 @@ print(questions['question_text_processed'].head())
 # Join the different processed titles together.
 long_string = ','.join(list(questions['question_text_processed'].values))
 # Create a WordCloud object
-wordcloud = WordCloud(background_color="white", max_words=5000, contour_width=3, contour_color='steelblue')
+wordcloud = WordCloud(background_color="white", max_words=5000, contour_width=3, width = 1200, height = 800, contour_color='steelblue')
 # Generate a word cloud
 wordcloud.generate(long_string)
 # Visualize the word cloud
-wordcloud_name = f'wordcloud_{SUBJECT}.pn'
+wordcloud_name = f'wordcloud_{SUBJECT}.png'
 wordcloud.to_file(wordcloud_name)
