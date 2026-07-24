@@ -11,7 +11,7 @@ from wordcloud import WordCloud
 
 # SETTINGS -----------------
 
-SUBJECT = 'math'
+SUBJECT = 'reading'
 
 # --------------------------
 
@@ -40,4 +40,5 @@ wordcloud = WordCloud(background_color="white", max_words=5000, contour_width=3,
 # Generate a word cloud
 wordcloud.generate(long_string)
 # Visualize the word cloud
-wordcloud.to_file("wordcloud.png")
+wordcloud_name = f'wordcloud_{SUBJECT}.pn'
+wordcloud.to_file(wordcloud_name)
