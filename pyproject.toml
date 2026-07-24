@@ -5,9 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "gensim>=4.4.0",
     "matplotlib>=3.11.1",
     "nltk>=3.10.0",
     "pandas>=3.0.5",
+    "pyldavis>=3.4.1",
     "scikit-learn>=1.9.0",
     "wordcloud>=1.9.6",
 ]
