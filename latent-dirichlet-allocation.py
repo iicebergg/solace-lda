@@ -22,7 +22,7 @@ from wordcloud import WordCloud
 
 # SETTINGS -----------------
 
-SUBJECT = 'math'
+SUBJECT = 'science'
 MIN_WORD_LEN = 3 # minimum number of characters
 NUM_TOPICS = 8
 
