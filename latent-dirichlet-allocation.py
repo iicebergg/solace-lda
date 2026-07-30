@@ -14,21 +14,17 @@ import pickle
 from pprint import pprint
 from gensim.utils import simple_preprocess
 from gensim.models import CoherenceModel
-from sklearn.decomposition import LatentDirichletAllocation
-from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
-from nltk.stem import SnowballStemmer
 from nltk.corpus import stopwords
 from wordcloud import WordCloud
 
 # SETTINGS -----------------
 
-SUBJECT = 'science'
+SUBJECT = 'reading'
 MIN_WORD_LEN = 3 # minimum number of characters
 NUM_TOPICS = 8
 
 # --------------------------
 
-nltk.download('stopwords')
 stop_words = stopwords.words('english')
 
 def sent_to_words(sentences):
@@ -102,10 +98,11 @@ def main():
     # Build LDA model
     lda_model = gensim.models.LdaMulticore(corpus=corpus,
                                            id2word=id2word,
-                                           num_topics=NUM_TOPICS)
+                                           num_topics=NUM_TOPICS,random_state=100,
+                                           chunksize=100,
+                                           passes=50)
     # Print the Keyword in the 10 topics
     pprint(lda_model.print_topics())
-    doc_lda = lda_model[corpus]
 
     LDAvis_filename = f'{SUBJECT}_data-{NUM_TOPICS}_topics.html'
 
