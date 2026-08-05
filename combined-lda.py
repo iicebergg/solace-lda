@@ -1,14 +1,3 @@
-# Thank you to Shashank Kapadia on Medium.com for the guidance
-#
-# Pipeline: TF-IDF vectorizes the question text, NMF factorizes the TF-IDF
-# matrix into an intermediate set of latent (non-negative) components, and
-# LDA is then fit on top of that NMF output to produce the final topic
-# clusters. NMF's output stays non-negative, which is what LDA requires as
-# input, so it can sit directly upstream of LDA in the pipeline.
-#
-# CLUSTER_SOURCE (see SETTINGS) controls which NMF output LDA is fit on: the
-# reconstructed matrix (W @ H, back in term space) or just the W matrix.
-
 import re
 
 import numpy as np
@@ -81,7 +70,7 @@ def main():
 
     documents = questions['question_text_processed'].tolist()
 
-    # --- Step 1: TF-IDF ---------------------------------------------------
+    # TF-IDF
     token_pattern = rf'(?u)\b[a-zA-Z]{{{MIN_WORD_LEN},}}\b'
     tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words, max_df=MAX_DF, min_df=MIN_DF,
                                         token_pattern=token_pattern)
@@ -89,20 +78,17 @@ def main():
     feature_names = tfidf_vectorizer.get_feature_names_out()
     print(f'TF-IDF matrix: {tfidf_matrix.shape[0]} documents x {tfidf_matrix.shape[1]} terms')
 
-    # --- Step 2: NMF on the TF-IDF matrix ---------------------------------
+    # NMF on the TF-IDF matrix
     nmf_model = NMF(n_components=NMF_COMPONENTS, init='nndsvd', random_state=RANDOM_STATE,
                      max_iter=500)
     nmf_doc_component = nmf_model.fit_transform(tfidf_matrix)
     nmf_component_term = nmf_model.components_
     print(f'NMF reconstruction error: {nmf_model.reconstruction_err_:.4f}')
 
-    # --- Step 3: LDA on top of either the reconstructed or the W matrix ----
+    # LDA on top of either the reconstructed or the W matrix
     if CLUSTER_SOURCE == 'nmf_w':
-        # Fit LDA on NMF's W (document-component) matrix only.
         lda_input = nmf_doc_component
     elif CLUSTER_SOURCE == 'lda':
-        # Fit LDA on the reconstructed matrix (W @ H), NMF's non-negative
-        # approximation of the original TF-IDF matrix, back in term space.
         lda_input = nmf_doc_component @ nmf_component_term
     else:
         raise ValueError(f"Unknown CLUSTER_SOURCE: {CLUSTER_SOURCE!r}, expected 'lda' or 'nmf_w'")
@@ -122,7 +108,7 @@ def main():
         final_topic_term = lda_model.components_  # (NUM_TOPICS, n_terms)
     final_num_topics = NUM_TOPICS
 
-    # --- Per-question topic assignments ------------------------------------
+    # Per-question topic assignments
     dominant_topics = final_doc_topic.argmax(axis=1)
     dominant_probs = final_doc_topic.max(axis=1)
     entropies = [topic_entropy_bits(row) for row in final_doc_topic]
@@ -146,7 +132,7 @@ def main():
     questions_topics_df.to_csv(questions_topics_csv, index=False)
     print(f'Wrote {len(questions_topics_df)} question-topic assignments to {questions_topics_csv}')
 
-    # --- Final topic summaries ----------------------------------------------
+    # Final topic summaries
     num_docs = len(questions_topics_df)
     topics_rows = []
     for topic_id, row in enumerate(final_topic_term):
@@ -169,7 +155,7 @@ def main():
     topics_df.to_csv(topics_csv, index=False)
     print(f'Wrote {len(topics_df)} topic summaries to {topics_csv}')
 
-    # --- Intermediate NMF component summaries (diagnostic) -------------------
+    # Intermediate NMF component summaries (diagnostic)
     nmf_rows = []
     for component_id, row in enumerate(nmf_component_term):
         top = top_words_for_row(row, feature_names, NUM_TOP_WORDS)
@@ -183,16 +169,15 @@ def main():
     nmf_components_df.to_csv(nmf_components_csv, index=False)
     print(f'Wrote {len(nmf_components_df)} NMF component summaries to {nmf_components_csv}')
 
-    #
     doc_topic_dist = final_doc_topic
     perplexity = min(30, len(doc_topic_dist) - 1)
     tsne = TSNE(n_components=2, random_state=100, perplexity=perplexity, init='pca')
     tsne_embeddings = tsne.fit_transform(doc_topic_dist)
-    # 3. Organize data for plotting
+    # Organize data for plotting
     plot_df = pd.DataFrame(tsne_embeddings, columns=['x', 'y'])
     plot_df['dominant_topic'] = np.argmax(doc_topic_dist, axis=1)
 
-    # 4. Scatter plot
+    # Scatter plot
     plt.figure(figsize=(10, 7))
     scatter = plt.scatter(
         plot_df['x'],
