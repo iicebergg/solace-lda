@@ -14,6 +14,7 @@ import re
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from nltk.corpus import stopwords
 from sklearn.decomposition import NMF, LatentDirichletAllocation
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.manifold import TSNE
@@ -21,19 +22,21 @@ from wordcloud import WordCloud
 
 # SETTINGS -----------------
 
-SUBJECT = 'science'
+SUBJECT = 'math'
 MIN_WORD_LEN = 3         # minimum number of characters per token
 MAX_DF = 0.9              # ignore terms that appear in more than this fraction of docs
 MIN_DF = 5                 # ignore terms that appear in fewer than this many docs
-NMF_COMPONENTS = 15       # intermediate latent components discovered by NMF
+NMF_COMPONENTS = 10       # intermediate latent components discovered by NMF
 NUM_TOPICS = 8             # final number of topics produced by LDA (only used when CLUSTER_SOURCE == 'lda')
 NUM_TOP_WORDS = 10         # keywords reported per topic
 RANDOM_STATE = 100
-CLUSTER_SOURCE = 'lda'    # 'lda'   = LDA is fit on the reconstructed matrix (W @ H), NMF's non-negative
+CLUSTER_SOURCE = 'nmf_w'    # 'lda'   = LDA is fit on the reconstructed matrix (W @ H), NMF's non-negative
                            #           approximation of the original TF-IDF matrix
                            # 'nmf_w' = LDA is fit on only NMF's W (document-component) matrix
 
 # --------------------------
+
+stop_words = stopwords.words('english') # should we additionally include more stopwords even despite worsened science results?
 
 def clean_text(text):
     text = re.sub('[,.△°∠≠≅¯+=><≤≥|#$%*÷:;_(){}•·!?-]', '', text)
@@ -80,7 +83,7 @@ def main():
 
     # --- Step 1: TF-IDF ---------------------------------------------------
     token_pattern = rf'(?u)\b[a-zA-Z]{{{MIN_WORD_LEN},}}\b'
-    tfidf_vectorizer = TfidfVectorizer(stop_words='english', max_df=MAX_DF, min_df=MIN_DF,
+    tfidf_vectorizer = TfidfVectorizer(stop_words=stop_words, max_df=MAX_DF, min_df=MIN_DF,
                                         token_pattern=token_pattern)
     tfidf_matrix = tfidf_vectorizer.fit_transform(documents)
     feature_names = tfidf_vectorizer.get_feature_names_out()
