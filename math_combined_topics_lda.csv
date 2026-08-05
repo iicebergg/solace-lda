@@ -1,0 +1,9 @@
+topic_id,top_keywords,keyword_weights,num_documents_dominant,proportion_documents_dominant,avg_probability_across_corpus,num_topics,nmf_components
+0,"sections, landing, arrow, experimental, labeled, polynomial, yellow, spinner, way, sell","0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250",19,0.024934383202099737,0.047949382958906175,8,15
+1,"sections, landing, arrow, experimental, labeled, polynomial, yellow, spinner, way, sell","0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250, 0.1250",0,0.0,0.047949382958906175,8,15
+2,"value, makes, expression, values, proves, estimate, true, place, rectangle, given","31.6947, 2.6376, 1.9350, 1.0869, 0.9326, 0.7279, 0.5950, 0.4910, 0.4855, 0.3551",16,0.02099737532808399,0.06749494947660087,8,15
+3,"model, shaded, represent, fraction, represented, whole, one, two, fractions, sum","8.2719, 5.5068, 5.0089, 3.0688, 2.5583, 2.2601, 1.8497, 1.7010, 1.2218, 1.1259",13,0.01706036745406824,0.06020193285489931,8,15
+4,"shown, triangle, figure, circle, closest, given, length, area, height, prism","27.1729, 17.9163, 16.0463, 15.5459, 13.4452, 12.7749, 10.5285, 8.4475, 8.3736, 8.2361",256,0.3359580052493438,0.2515931152916788,8,15
+5,"equivalent, expression, zero, equal, denominator, polynomial, equals, simplest, form, identify","22.4094, 20.3676, 5.6697, 3.8402, 3.1245, 2.4525, 2.2071, 2.0990, 1.8789, 1.4520",39,0.051181102362204724,0.07982407551229416,8,15
+6,"solution, following, statement, true, equation, describes, value, end, system, makes","24.5752, 16.4616, 14.9028, 13.6135, 8.3839, 6.1587, 4.6965, 3.9521, 3.5150, 3.3997",65,0.08530183727034121,0.11128269950386699,8,15
+7,"number, represents, best, graph, function, data, set, line, equation, shows","45.8579, 28.2657, 26.1558, 25.2436, 21.5767, 20.7782, 19.9966, 18.0014, 16.1066, 15.8410",354,0.4645669291338583,0.3337044614428475,8,15

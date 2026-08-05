@@ -1,0 +1,9 @@
+topic_id,top_keywords,keyword_weights,num_documents_dominant,proportion_documents_dominant,avg_probability_across_corpus,num_topics,nmf_components
+0,"sentence, read, best, paragraph, meaning, example, language, opinion, used, contains","36.5988, 15.1904, 6.6862, 5.5585, 4.5239, 3.8985, 3.4542, 3.3454, 3.0812, 2.9639",80,0.1478743068391867,0.12492090299306582,8,15
+1,"word, paragraph, means, selection, purpose, root, supports, suggests, synonym, read","26.6896, 23.8302, 15.4786, 14.3188, 11.2578, 4.8466, 3.7981, 3.6853, 3.5735, 3.1231",80,0.1478743068391867,0.1290165431855408,8,15
+2,"likely, idea, main, question, answered, paragraph, article, section, people, supports","17.9588, 16.3056, 14.6267, 10.2088, 9.5509, 7.7024, 3.4190, 2.8843, 2.4825, 2.4020",80,0.1478743068391867,0.13036571834594737,8,15
+3,"article, based, reader, according, may, determine, likely, tell, paragraph, sea","24.4949, 22.8068, 16.1222, 9.9857, 6.7154, 4.9638, 4.9209, 4.6842, 3.9429, 3.8062",86,0.1589648798521257,0.13423664082008713,8,15
+4,"poem, speaker, lines, theme, narrator, line, show, tone, suggests, summary","19.6978, 11.5782, 8.8048, 1.6680, 1.6673, 1.2731, 1.2272, 1.1813, 1.1703, 1.0210",31,0.05730129390018484,0.11050210232737033,8,15
+5,"best, information, would, summary, section, paragraph, included, heading, described, useful","23.8540, 18.7531, 12.2802, 9.1041, 8.9327, 6.0846, 5.6371, 4.1486, 3.8585, 3.5657",84,0.15526802218114602,0.1289373835429175,8,15
+6,"author, paragraph, likely, includes, include, use, paragraphs, wrote, uses, article","31.1418, 7.6450, 5.5103, 5.4687, 5.1878, 4.0045, 3.8772, 3.5685, 3.3796, 3.2939",56,0.10351201478743069,0.12175013371433895,8,15
+7,"story, mean, paragraph, theme, word, end, important, conflict, title, narrator","25.8268, 14.8674, 5.9622, 5.5120, 3.9814, 3.8242, 2.9268, 2.8834, 2.2538, 1.5064",44,0.08133086876155268,0.12027057507073209,8,15

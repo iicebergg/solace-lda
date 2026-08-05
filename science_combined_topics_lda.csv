@@ -1,0 +1,9 @@
+topic_id,top_keywords,keyword_weights,num_documents_dominant,proportion_documents_dominant,avg_probability_across_corpus,num_topics,nmf_components
+0,"likely, table, based, form, used, shown, data, produced, information, investigation","11.6683, 7.3733, 2.9479, 1.4907, 1.1018, 0.6915, 0.6382, 0.5956, 0.5298, 0.4516",57,0.25675675675675674,0.1125727092842304,8,15
+1,"water, scientists, students, likely, order, used, correct, placed, point, organisms","14.7029, 6.7835, 3.3580, 2.7581, 1.8543, 1.7067, 1.6244, 1.5591, 1.4940, 1.3980",34,0.15315315315315314,0.1477935363757424,8,15
+2,"energy, organism, type, plant, chemical, reaction, organisms, information, rock, point","7.3529, 7.0699, 6.5888, 3.6096, 3.0629, 2.8593, 2.1425, 1.9103, 1.7646, 1.5836",29,0.13063063063063063,0.14121523226380375,8,15
+3,"process, shown, correctly, describes, data, represents, cell, cause, rock, correct","8.6500, 5.7616, 3.6044, 3.5371, 2.7921, 2.2488, 1.9971, 1.7346, 1.6022, 1.5834",30,0.13513513513513514,0.13619296194143185,8,15
+4,"using, data, students, chemical, different, produced, moles, use, shown, cause","7.9876, 1.0177, 0.7015, 0.5104, 0.3310, 0.3181, 0.2836, 0.2582, 0.2317, 0.1895",6,0.02702702702702703,0.08425069763366971,8,15
+5,"best, characteristic, common, describes, students, plant, help, use, order, recorded","8.8109, 5.1513, 4.5141, 1.0557, 1.0430, 0.8403, 0.6866, 0.6431, 0.5848, 0.3551",11,0.04954954954954955,0.10720597585457667,8,15
+6,"student, earth, best, investigation, air, different, help, based, used, recorded","10.6532, 7.4083, 4.0798, 4.0638, 3.4055, 2.9341, 2.2313, 1.7617, 1.7432, 1.7242",34,0.15315315315315314,0.152283547853137,8,15
+7,"result, solution, moles, form, use, produced, cause, volume, diagram, information","7.5395, 5.4705, 5.1080, 2.4643, 2.1098, 1.9924, 1.3056, 1.2782, 1.1172, 1.0162",21,0.0945945945945946,0.11848533879340822,8,15

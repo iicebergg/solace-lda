@@ -1,0 +1,9 @@
+topic_id,top_keywords,keyword_weights,num_documents_dominant,proportion_documents_dominant,avg_probability_across_corpus,num_topics,nmf_components
+0,"selection, purpose, supports, first, details, example, mainly, figurative, described, suggest","12.9669, 9.2644, 3.3767, 1.1967, 0.9393, 0.9274, 0.9185, 0.8935, 0.8227, 0.7977",35,0.06469500924214418,0.07469491014659867,8,15
+1,"mean, question, answered, paragraph, section, first, message, word, title, suggests","14.1761, 9.5867, 8.9435, 5.9860, 2.0039, 1.2544, 1.1880, 1.0735, 0.9979, 0.9671",29,0.053604436229205174,0.08491587030527119,8,15
+2,"paragraph, suggests, students, words, way, purpose, details, heading, synonym, organized","15.3392, 2.6099, 0.9487, 0.8679, 0.7568, 0.7563, 0.6317, 0.5806, 0.5602, 0.5119",19,0.03512014787430684,0.07424539237445896,8,15
+3,"poem, speaker, lines, theme, narrator, line, show, tone, suggests, summary","19.3115, 11.3344, 8.6153, 1.7504, 1.7101, 1.2735, 1.2581, 1.1891, 0.9215, 0.8470",26,0.04805914972273567,0.0867135105986665,8,15
+4,"article, based, reader, according, may, determine, tell, sea, first, understand","24.4229, 22.5989, 16.0612, 9.9300, 6.8208, 5.1024, 4.8393, 3.9445, 3.4998, 2.5061",64,0.11829944547134935,0.13243683599279618,8,15
+5,"story, author, best, idea, main, paragraph, theme, sentence, conflict, include","25.3591, 23.0632, 22.7109, 16.2497, 15.2978, 14.9402, 6.2671, 5.5948, 4.8496, 4.8095",170,0.3142329020332717,0.22187188640962785,8,15
+6,"likely, information, would, author, section, article, included, summary, paragraph, useful","26.7135, 16.0695, 9.3132, 8.1829, 7.7088, 5.7281, 5.0145, 5.0077, 3.4302, 3.2087",92,0.17005545286506468,0.14677626662844778,8,15
+7,"sentence, word, paragraph, means, read, best, meaning, used, root, synonym","31.9547, 29.3094, 18.3637, 16.7329, 16.3887, 6.7490, 6.1739, 6.0342, 5.3401, 3.7544",106,0.19593345656192238,0.17834532754413288,8,15

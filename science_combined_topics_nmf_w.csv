@@ -1,0 +1,9 @@
+topic_id,top_keywords,keyword_weights,num_documents_dominant,proportion_documents_dominant,avg_probability_across_corpus,num_topics,nmf_components
+0,"plant, cell, order, light, food, shown, group, investigation, characteristic, two","5.9153, 4.6038, 1.8088, 1.0978, 0.8760, 0.7452, 0.6861, 0.4057, 0.3923, 0.3861",53,0.23873873873873874,0.10921063117708958,8,15
+1,"best, students, use, describes, shown, student, help, identify, many, table","12.3860, 1.5292, 0.9802, 0.9485, 0.5419, 0.5203, 0.5145, 0.4709, 0.4700, 0.4256",9,0.04054054054054054,0.11357743694830409,8,15
+2,"energy, type, chemical, reaction, two, moles, solution, use, many, form","7.7223, 5.7511, 4.7267, 4.6959, 2.4755, 2.4147, 2.3966, 2.3337, 2.0830, 1.5146",26,0.11711711711711711,0.13115844520575154,8,15
+3,"water, table, based, students, correct, placed, point, used, investigation, different","14.5439, 8.6490, 3.7775, 3.2306, 1.4681, 1.4679, 1.3028, 1.1511, 1.1353, 1.0716",22,0.0990990990990991,0.12205255216483042,8,15
+4,"using, process, shown, data, correctly, describes, result, cause, rock, represents","9.1576, 8.0579, 6.5784, 4.7734, 3.9887, 3.7160, 3.2994, 2.4229, 2.3406, 2.3240",47,0.21171171171171171,0.14475877362630213,8,15
+5,"organism, organisms, first, made, based, information, result, food, correct, plant","6.9086, 2.1970, 1.8836, 1.0970, 0.9688, 0.9518, 0.8905, 0.7263, 0.4638, 0.3884",10,0.04504504504504504,0.10718397432144992,8,15
+6,"likely, air, earth, would, form, result, help, used, produced, data","13.8559, 6.3202, 5.6614, 4.5363, 2.2013, 2.0465, 1.3831, 1.2924, 0.9620, 0.6883",25,0.11261261261261261,0.13351926653032806,8,15
+7,"student, scientists, characteristic, common, investigation, different, time, used, made, help","10.4845, 7.3278, 5.0699, 4.2647, 3.9109, 2.9585, 2.2412, 1.9202, 1.6453, 1.5710",30,0.13513513513513514,0.1385389200259442,8,15

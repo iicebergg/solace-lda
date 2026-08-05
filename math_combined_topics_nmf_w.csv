@@ -1,0 +1,9 @@
+topic_id,top_keywords,keyword_weights,num_documents_dominant,proportion_documents_dominant,avg_probability_across_corpus,num_topics,nmf_components
+0,"solution, shown, figure, closest, prism, set, height, rectangular, area, measure","26.1612, 22.6471, 13.4160, 10.5795, 6.7001, 6.2790, 6.2656, 6.0408, 5.6358, 4.8130",171,0.22440944881889763,0.13299018479290467,8,15
+1,"following, describes, end, form, simplest, values, could, factor, statement, angles","22.8609, 8.7409, 5.4585, 4.6865, 2.0093, 1.6608, 1.6470, 1.6233, 1.5285, 1.3452",41,0.05380577427821522,0.11038983531253196,8,15
+2,"value, triangle, used, find, makes, right, angle, shown, similar, could","36.3766, 19.8279, 4.6306, 3.9954, 3.7950, 3.7807, 3.6897, 3.4871, 3.3452, 3.2583",92,0.12073490813648294,0.12672796115638457,8,15
+3,"statement, true, makes, make, shown, based, triangles, days, sentence, centimeters","20.1691, 18.7055, 3.2923, 2.8108, 2.0484, 1.6587, 1.4278, 1.4061, 1.3049, 1.2639",33,0.04330708661417323,0.11012303040609912,8,15
+4,"number, function, graph, total, sentence, represents, shows, best, table, data","47.0339, 20.0932, 14.1620, 14.0319, 13.6178, 8.3578, 8.1454, 7.0276, 5.3545, 5.1029",174,0.2283464566929134,0.1457710127007402,8,15
+5,"equation, represents, line, best, graph, represented, table, slope, points, data","28.4409, 18.3965, 18.1705, 17.2024, 10.5864, 7.2194, 4.7114, 4.7087, 4.4941, 3.9729",82,0.10761154855643044,0.12733797499987323,8,15
+6,"circle, given, point, length, center, lies, radius, system, units, angle","17.4257, 13.4488, 7.6904, 6.1029, 4.1139, 3.6971, 3.6878, 1.9799, 1.8434, 1.8383",43,0.05643044619422572,0.11322952337839104,8,15
+7,"equivalent, expression, model, data, set, shaded, represent, zero, fraction, one","22.7499, 21.0769, 13.7373, 10.6990, 9.8494, 9.2574, 8.9721, 5.8854, 5.5549, 5.3582",126,0.16535433070866143,0.13343047725307522,8,15
